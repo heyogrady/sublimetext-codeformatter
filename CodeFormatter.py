@@ -66,7 +66,7 @@ class CodeFormatterCommand(sublime_plugin.TextCommand):
     def run(self, edit, syntax=False, saving=False):
 
         if self.view.is_scratch():
-            return show_error("File is scratch")
+            return False
 
         file_name = self.view.file_name()
 
